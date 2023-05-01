@@ -3,18 +3,19 @@ import numpy as np
 
 
 
-def ez_pandas_reader(fname):
+def read_pandas(fname):
     df = pd.read_csv(fname)
     df = df.set_index("id")
     return df
 
 
 def main():
-    # main code goes here
-    test_noans = ez_pandas_reader("test_noans.csv")
-    train = ez_pandas_reader("train.csv")
+    test_noans = read_pandas("test_noans.csv")
+    train = read_pandas("train.csv")
 
-    train_labels = train["label"].to_numpy()
+
+
+    '''train_labels = train["label"].to_numpy()
     vals, counts = np.unique(train_labels, return_counts = True)
 
     max_count_val = np.argwhere(counts == np.max(counts)).flatten()[0]
@@ -30,7 +31,7 @@ def main():
     test_ans = test_noans["label"]
     test_ans.to_csv("dumb_output_2.csv")
 
-    print("it worked!!!!!!!!")
+    print("it worked!!!!!!!!")'''
 
 
 
