@@ -58,7 +58,7 @@ def main():
 
     test_noans["label"] = predicted_test_labels
     test_ans = test_noans["label"]
-    test_ans.to_csv("naive_bayes_output.csv")
+    test_ans.to_csv("test_ans.csv")
 
 if __name__ == "__main__":
     main()

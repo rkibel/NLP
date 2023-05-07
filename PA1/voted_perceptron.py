@@ -28,7 +28,6 @@ def main():
     while t <= T:
         for i in range(train_documents_len):
             if (train_labels[i] * np.dot(w[k], train_words[i]) <= 0):
-                print(k, t)
                 w = np.vstack([w, np.array(w[k] + train_labels[i] * train_words[i])])
                 c = np.append(c, 1)
                 k += 1
@@ -57,7 +56,7 @@ def main():
 
     test_noans["label"] = predicted_test_labels
     test_ans = test_noans["label"]
-    test_ans.to_csv("voted_perceptron_output.csv")
+    test_ans.to_csv("test_ans.csv")
     
 if __name__ == "__main__":
     main()
