@@ -1,0 +1,1 @@
+python -u "ner_spanish.py" $1 $2

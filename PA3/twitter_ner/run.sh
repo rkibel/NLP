@@ -1,0 +1,1 @@
+python -u "ner_twitter.py" $1 $2
